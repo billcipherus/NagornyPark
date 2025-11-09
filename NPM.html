@@ -1,5 +1,6 @@
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=f1f1d7d7-cd6e-4883-b0d1-46ac439370d4&lang=ru_RU"></script>
     <style>
       html,
@@ -12,8 +13,8 @@
       }
       body {
         display: flex;
-      align-items: stretch;
-      flex-direction: column;
+        align-items: stretch;
+        flex-direction: column;
       }
     </style>
     <link
@@ -784,6 +785,21 @@
           myMap.geoObjects.add(line);
         });
       }
+
+      let darkTheme = 0
+      function changeTheme(){
+        const body_elem = document.getElementsByTagName("body")
+        if (darkTheme === 0){
+          body_elem[0].style.backgroundColor = "black"
+          darkTheme = 1
+          console.log(darkTheme)
+        }
+        else if (darkTheme === 1){
+          body_elem[0].style.backgroundColor = "white"
+          darkTheme = 0
+          console.log(darkTheme)
+        }
+      }
     </script>
   </head>
 
@@ -797,6 +813,15 @@
       id="cywbtn"
     >
       Выбор места
+    </button>
+
+    <button
+      class="btn-primary m-2"
+      type="button"
+      id="themeChanger"
+      onclick="changeTheme()"
+    >
+      Смена темы
     </button>
 
     <div
