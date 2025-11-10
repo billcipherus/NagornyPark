@@ -1,6 +1,6 @@
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://api-maps.yandex.ru/2.1/?apikey=f1f1d7d7-cd6e-4883-b0d1-46ac439370d4&lang=ru_RU"></script>
     <style>
       html,
@@ -15,6 +15,34 @@
         display: flex;
         align-items: stretch;
         flex-direction: column;
+      }
+      #cywbtn {
+        --bs-btn-color: #000000;
+        --bs-btn-bg: #0d6efd;
+        --bs-btn-border-color: #000000;
+        --bs-btn-hover-color: #000000;
+        --bs-btn-hover-bg: #0b5ed7;
+        --bs-btn-hover-border-color: #000000;
+        --bs-btn-active-color: #000000;
+        --bs-btn-active-bg: #0851bb;
+        --bs-btn-active-border-color: #000000;
+        --bs-btn-disabled-color: #000000;
+        --bs-btn-disabled-bg: #0851bb;
+        --bs-btn-disabled-border-color: #000000;
+      }
+      #themeChanger {
+        --bs-btn-color: #000000;
+        --bs-btn-bg: #0d6efd;
+        --bs-btn-border-color: #000000;
+        --bs-btn-hover-color: #000000;
+        --bs-btn-hover-bg: #0b5ed7;
+        --bs-btn-hover-border-color: #000000;
+        --bs-btn-active-color: #000000;
+        --bs-btn-active-bg: #0851bb;
+        --bs-btn-active-border-color: #000000;
+        --bs-btn-disabled-color: #000000;
+        --bs-btn-disabled-bg: #0851bb;
+        --bs-btn-disabled-border-color: #000000;
       }
     </style>
     <link
@@ -713,7 +741,7 @@
             [43.116774, 131.923964],
             [43.116777, 131.923922],
             [43.116781, 131.923836],
-            [43.116781, 131.923836],
+            [43.116792, 131.923804],
             [43.11679, 131.923779],
             [43.11679, 131.923779],
             [43.1168, 131.92375],
@@ -770,6 +798,199 @@
             // 43.117312, 131.923639 - ещё дорожка
             // 43.117603, 131.923727 - дорожка
           ],
+          [
+            [43.117312, 131.923639],
+            [43.117316, 131.923664],
+            [43.117329, 131.923693],
+            [43.117341, 131.923725],
+            [43.117335, 131.923815],
+            [43.117342, 131.923862],
+            [43.117352, 131.923883],
+            [43.117369, 131.923902],
+            [43.117385, 131.923908],
+            [43.117397, 131.923905],
+            [43.117407, 131.923886],
+            [43.117412, 131.923862],
+            [43.117415, 131.923813],
+            [43.117424, 131.923779],
+            [43.117435, 131.92376],
+            [43.117447, 131.923749],
+            [43.117468, 131.923743],
+            [43.117481, 131.923749],
+            [43.117495, 131.923767],
+            [43.117495, 131.923767],
+            [43.11752, 131.923831],
+            [43.117529, 131.923859],
+            [43.117535, 131.923885],
+            [43.11754, 131.923968],
+            [43.117544, 131.923981],
+            [43.117552, 131.923988],
+            [43.117573, 131.924045],
+            [43.11758, 131.924074],
+            [43.117582, 131.924097],
+            [43.117577, 131.924116],
+            [43.11756, 131.924167],
+            [43.117556, 131.924202],
+            [43.117563, 131.924231],
+            [43.117594, 131.924318],
+            [43.117601, 131.924345],
+            [43.117604, 131.924371],
+            [43.117602, 131.924401],
+            [43.117595, 131.924436],
+            [43.117583, 131.924466],
+            [43.117532, 131.924579],
+            [43.11751, 131.924611],
+            [43.117494, 131.924625],
+            [43.117475, 131.924623],
+            [43.117466, 131.924613],
+            [43.117457, 131.924592],
+            [43.117449, 131.924547],
+            [43.117446, 131.924415],
+            [43.117438, 131.924397],
+            [43.117423, 131.92438],
+            [43.117397, 131.924364],
+            [43.117381, 131.924368],
+            [43.117373, 131.924381],
+            [43.117365, 131.924397],
+            [43.117341, 131.924559],
+            [43.117341, 131.924559],
+            [43.117323, 131.924587],
+            [43.117266, 131.92461],
+            [43.117187, 131.924636],
+            [43.117173, 131.924633],
+            [43.117161, 131.92462],
+            [43.117162, 131.924579],
+            [43.117227, 131.924472],
+            [43.117236, 131.924451],
+            [43.117247, 131.924399],
+            [43.117272, 131.924462],
+            [43.117278, 131.924502],
+            [43.117266, 131.92461],
+            // 43.117335, 131.923815 - пересечение с другой
+            // 43.117415, 131.923813 - пересечение с той же что и прошлый раз
+            // 43.117520, 131.923831 - не опять, а снова...
+            // 43.117552, 131.923988 - разделяется на маленькую и большую (текущую)
+            // 43.117266, 131.924610 - уже разделяется на вторую маленькую
+            // 43.117247, 131.924399 - СЛУЖИТЬ РОССИИ СУЖДЕНО ТЕБЕ И МНЕ СЛУЖИТЬ РОССИИ УДИВИТЕЛЬНОЙ СТРАНЕ ГДЕ СОЛНЦЕ НОВОЕ ВСТАЕЕЕЕТ НА НЕБЕ СИИИИИИНЕЕЕЕЕМ ПЛЕЧОМ К ПЛЕЧУ ИДУТ РОССИИСКИЕ ВОЙСКА И ПУСТЬ ВОЕННАЯ ДОРОГА НЕЛЕГКА, МЫ БУДЕМ ВЕРОЮ И ПРАВДОЮ СЛУЖИТЬ РОССИИ
+          ],
+          [
+            [43.11729, 131.923777],
+            [43.117335, 131.923815],
+            [43.117373, 131.923828],
+            [43.117388, 131.923828],
+            [43.117415, 131.923813],
+            [43.117428, 131.923799],
+            [43.117445, 131.92379],
+            [43.117462, 131.923795],
+            [43.117486, 131.923817],
+            [43.117508, 131.923826],
+            [43.11752, 131.923831],
+            [43.11755, 131.923841],
+            [43.11757, 131.923859],
+            [43.117592, 131.923897],
+            [43.117611, 131.923943],
+            [43.117621, 131.92398],
+            [43.117632, 131.924017],
+            [43.117639, 131.924031],
+            [43.117674, 131.924067],
+            [43.117696, 131.924104],
+            [43.117707, 131.924139],
+            [43.117712, 131.924167],
+            [43.117716, 131.924228],
+            [43.117723, 131.924245],
+            [43.117753, 131.924278],
+            [43.117764, 131.9243],
+            [43.11778, 131.924366],
+          ],
+          [
+            [43.117552, 131.923988],
+            [43.117578, 131.923991],
+            [43.117621, 131.92398],
+          ],
+          [
+            [43.117611, 131.923943],
+            [43.117621, 131.923933],
+            [43.117626, 131.923925],
+            [43.117633, 131.923885],
+            [43.117629, 131.923842],
+            [43.117617, 131.923778],
+            [43.117603, 131.923732],
+          ],
+          [
+            [43.117212, 131.924389],
+            [43.117196, 131.924406],
+            [43.117166, 131.924421],
+            [43.117148, 131.924423],
+            [43.117132, 131.924422],
+            [43.117117, 131.924417],
+            [43.117103, 131.924404],
+            [43.117093, 131.924388],
+            [43.117086, 131.924364],
+            [43.11708, 131.924319],
+            [43.117086, 131.924243],
+          ],
+          [
+            [43.117111, 131.924266],
+            [43.117118, 131.924215],
+            [43.117116, 131.924069],
+            [43.117124, 131.92403],
+          ],
+          [
+            [43.116792, 131.923804],
+            [43.116816, 131.92381],
+            [43.116831, 131.923824],
+            [43.116835, 131.92383],
+            [43.116858, 131.923932],
+            [43.116866, 131.923948],
+            [43.11688, 131.923962],
+            [43.1169, 131.923961],
+            [43.116941, 131.923947],
+            [43.116963, 131.923947],
+            [43.116976, 131.923954],
+            [43.117005, 131.923985],
+          ],
+          [
+            [43.1169, 131.923961],
+            [43.116896, 131.923951],
+            [43.116891, 131.923923],
+            [43.116907, 131.923875],
+          ],
+          [
+            [43.117046, 131.923467],
+            [43.11705, 131.92345],
+            [43.117045, 131.923434],
+            [43.117029, 131.923414],
+            [43.117005, 131.923407],
+            [43.11697, 131.923416],
+            [43.11695, 131.923435],
+            [43.116937, 131.92346],
+            [43.116907, 131.923486],
+            [43.116905, 131.923516],
+            [43.116912, 131.923535],
+          ],
+          [
+            [43.116865, 131.923535],
+            [43.116858, 131.923496],
+            [43.116834, 131.923447],
+            [43.116816, 131.923385],
+            [43.116804, 131.923368],
+            [43.116785, 131.92336],
+            [43.116739, 131.923359],
+            [43.116668, 131.923346],
+            [43.116639, 131.923351],
+            [43.11658, 131.923407],
+            [43.116561, 131.923434],
+            [43.116548, 131.923467],
+            [43.116546, 131.923495],
+            [43.116548, 131.923505],
+            [43.116585, 131.923645],
+            [43.1166, 131.923678],
+            [43.11663, 131.923706],
+            [43.116645, 131.923708],
+            [43.116652, 131.923706],
+            // 43.116639, 131.923351 - новая дорожка
+            // 43.116548, 131.923505 - вторая новая дорожка
+          ],
         ];
 
         pathCoords.forEach((path) => {
@@ -786,18 +1007,94 @@
         });
       }
 
-      let darkTheme = 0
-      function changeTheme(){
-        const body_elem = document.getElementsByTagName("body")
-        if (darkTheme === 0){
-          body_elem[0].style.backgroundColor = "black"
-          darkTheme = 1
-          console.log(darkTheme)
-        }
-        else if (darkTheme === 1){
-          body_elem[0].style.backgroundColor = "white"
-          darkTheme = 0
-          console.log(darkTheme)
+      let darkTheme = 0;
+      function changeTheme() {
+        const firstBtn = document.getElementById("cywbtn");
+        const themeChanger = document.getElementById("themeChanger");
+        const offcanvas = document.getElementById("offcanvasBottom");
+        const body_elem = document.body;
+
+        if (darkTheme === 0) {
+          body_elem.style.backgroundColor = "#212529";
+
+          firstBtn.style.setProperty("--bs-btn-color", "#fff");
+          firstBtn.style.setProperty("--bs-btn-bg", "#dc3545");
+          firstBtn.style.setProperty("--bs-btn-border-color", "#fff");
+          firstBtn.style.setProperty("--bs-btn-hover-color", "#fff");
+          firstBtn.style.setProperty("--bs-btn-hover-bg", "#bb2d3b");
+          firstBtn.style.setProperty("--bs-btn-hover-border-color", "#fff");
+          firstBtn.style.setProperty("--bs-btn-active-color", "#fff");
+          firstBtn.style.setProperty("--bs-btn-active-bg", "#9f2733");
+          firstBtn.style.setProperty("--bs-btn-active-border-color", "#fff");
+          firstBtn.style.setProperty("--bs-btn-disabled-color", "#fff");
+          firstBtn.style.setProperty("--bs-btn-disabled-bg", "#9f2733");
+          firstBtn.style.setProperty("--bs-btn-disabled-border-color", "#fff");
+
+          themeChanger.style.setProperty("--bs-btn-color", "#fff");
+          themeChanger.style.setProperty("--bs-btn-bg", "#dc3545");
+          themeChanger.style.setProperty("--bs-btn-border-color", "#fff");
+          themeChanger.style.setProperty("--bs-btn-hover-color", "#fff");
+          themeChanger.style.setProperty("--bs-btn-hover-bg", "#bb2d3b");
+          themeChanger.style.setProperty("--bs-btn-hover-border-color", "#fff");
+          themeChanger.style.setProperty("--bs-btn-active-color", "#fff");
+          themeChanger.style.setProperty("--bs-btn-active-bg", "#9f2733");
+          themeChanger.style.setProperty("--bs-btn-active-border-color", "#fff");
+
+          themeChanger.style.setProperty("--bs-btn-disabled-color", "#fff");
+          themeChanger.style.setProperty("--bs-btn-disabled-bg", "#9f2733");
+          themeChanger.style.setProperty("--bs-btn-disabled-border-color", "#fff");
+
+          themeChanger.style.setProperty("--bs-btn-active-border-color", "#fff");
+
+          offcanvas.setAttribute("data-bs-theme", "dark");
+
+          darkTheme = 1;
+          console.log("Тёмная тема");
+        } else {
+          body_elem.style.backgroundColor = "#fff";
+
+          firstBtn.style.setProperty("--bs-btn-color", "#000000");
+          firstBtn.style.setProperty("--bs-btn-bg", "#0d6efd");
+          firstBtn.style.setProperty("--bs-btn-border-color", "#000000");
+          firstBtn.style.setProperty("--bs-btn-hover-color", "#000000");
+          firstBtn.style.setProperty("--bs-btn-hover-bg", "#0b5ed7");
+          firstBtn.style.setProperty("--bs-btn-hover-border-color", "#000000");
+          firstBtn.style.setProperty("--bs-btn-active-color", "#000000");
+          firstBtn.style.setProperty("--bs-btn-active-bg", "#0851bb");
+          firstBtn.style.setProperty("--bs-btn-active-border-color", "#000000");
+          firstBtn.style.setProperty("--bs-btn-disabled-color", "#000000");
+          firstBtn.style.setProperty("--bs-btn-disabled-bg", "#0851bb");
+          firstBtn.style.setProperty(
+            "--bs-btn-disabled-border-color",
+            "#000000"
+          );
+
+          themeChanger.style.setProperty("--bs-btn-color", "#000000");
+          themeChanger.style.setProperty("--bs-btn-bg", "#0d6efd");
+          themeChanger.style.setProperty("--bs-btn-border-color", "#000000");
+          themeChanger.style.setProperty("--bs-btn-hover-color", "#000000");
+          themeChanger.style.setProperty("--bs-btn-hover-bg", "#0b5ed7");
+          themeChanger.style.setProperty(
+            "--bs-btn-hover-border-color",
+            "#000000"
+          );
+          themeChanger.style.setProperty("--bs-btn-active-color", "#000000");
+          themeChanger.style.setProperty("--bs-btn-active-bg", "#0851bb");
+          themeChanger.style.setProperty(
+            "--bs-btn-active-border-color",
+            "#000000"
+          );
+          themeChanger.style.setProperty("--bs-btn-disabled-color", "#000000");
+          themeChanger.style.setProperty("--bs-btn-disabled-bg", "#0851bb");
+          themeChanger.style.setProperty(
+            "--bs-btn-disabled-border-color",
+            "#000000"
+          );
+
+          offcanvas.setAttribute("data-bs-theme", "light");
+
+          darkTheme = 0;
+          console.log("Светлая тема");
         }
       }
     </script>
@@ -816,7 +1113,7 @@
     </button>
 
     <button
-      class="btn-primary m-2"
+      class="btn btn-primary m-2"
       type="button"
       id="themeChanger"
       onclick="changeTheme()"
@@ -830,7 +1127,7 @@
       id="offcanvasBottom"
       aria-labelledby="offcanvasBottomLabel"
       data-bs-backdrop="false"
-      data-bs-theme="dark"
+      data-bs-theme="light"
     >
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasBottomLabel">
