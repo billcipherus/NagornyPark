@@ -44,14 +44,18 @@
         --bs-btn-disabled-bg: #0851bb;
         --bs-btn-disabled-border-color: #000000;
       }
-      .placeItem{
+      .placeItem {
         display: flex;
         padding: 5px;
         margin: 10px;
       }
-      .placeIcon{
+      .placeIcon {
         width: 20px;
         height: 20px;
+      }
+
+      .itemInfo {
+        display: none;
       }
     </style>
     <link
@@ -62,42 +66,106 @@
     <script>
       ymaps.ready(init);
 
-      const places = [
-        {
-          coords: [43.118465, 131.921895],
-          name: "Кафетерий",
-          iconUrl:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Tea_cup_icon.svg/1200px-Tea_cup_icon.svg.png",
-          img: "",
-          desc: "Место в центре парка, где можно быстро перекусить с чашкой кофе",
-        },
-        {
-          coords: [43.118453, 131.922047],
-          name: "Туалет",
-          iconUrl:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Noun_3121.svg/1200px-Noun_3121.svg.png",
-          img: "",
-          desc: "Туалет",
-        },
-        {
-          coords: [43.117907, 131.921767],
-          name: "Чи-Фань",
-          iconUrl:
-            "https://avatars.mds.yandex.net/i?id=221c485a37ed0570142caca58a4463c5d0db369d-5888278-images-thumbs&n=13",
-          img: "",
-          desc: "Китайская еда быстрого приготовления",
-        },
-        {
-          coords: [43.117879, 131.921837],
-          name: "Pizza Ragazzi",
-          iconUrl:
-            "https://w7.pngwing.com/pngs/338/926/png-transparent-fast-food-barbecue-hot-dog-lunch-meat-barbecue-barbecue-angle-food.png",
-          img: "",
-          desc: "Итальянская пицца в пяти шагах от парковки",
-        },
-      ];
-
       function init() {
+        const places = [
+          {
+            coords: [43.118465, 131.921895],
+            name: "Кафетерий",
+            iconUrl:
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Tea_cup_icon.svg/1200px-Tea_cup_icon.svg.png",
+            img: "",
+            desc: "Место в центре парка, где можно быстро перекусить с чашкой кофе",
+          },
+          {
+            coords: [43.118453, 131.922047],
+            name: "Туалет",
+            iconUrl:
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Noun_3121.svg/1200px-Noun_3121.svg.png",
+            img: "",
+            desc: "Туалет",
+          },
+          {
+            coords: [43.117907, 131.921767],
+            name: "Чи-Фань",
+            iconUrl:
+              "https://avatars.mds.yandex.net/i?id=221c485a37ed0570142caca58a4463c5d0db369d-5888278-images-thumbs&n=13",
+            img: "",
+            desc: "Китайская еда быстрого приготовления",
+          },
+          {
+            coords: [43.117879, 131.921837],
+            name: "Pizza Ragazzi",
+            iconUrl:
+              "https://w7.pngwing.com/pngs/338/926/png-transparent-fast-food-barbecue-hot-dog-lunch-meat-barbecue-barbecue-angle-food.png",
+            img: "",
+            desc: "Итальянская пицца в пяти шагах от парковки",
+          },
+          {
+            coords: [43.116548, 131.923505],
+            name: "Смотровая площадка",
+            iconUrl:
+              "https://w7.pngwing.com/pngs/371/1021/png-transparent-computer-icons-binoculars-binoculars-cdr-text-logo.png",
+            img: "",
+            desc: "Смотровая площадка на город и парк",
+          },
+          {
+            coords: "43.116993, 131.923989",
+            name: "Смотровая площадка",
+            iconUrl:
+              "https://w7.pngwing.com/pngs/371/1021/png-transparent-computer-icons-binoculars-binoculars-cdr-text-logo.png",
+            img: "",
+            desc: "Смотровая площадка на город",
+          },
+          {
+            coords: [43.11713, 131.923391],
+            name: "Кофейня",
+            iconUrl:
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Tea_cup_icon.svg/1200px-Tea_cup_icon.svg.png",
+            img: "",
+            desc: "Мини-кофейня без помещения",
+          },
+          {
+            coords: [43.117965, 131.922887],
+            name: "Сцена",
+            iconUrl:
+              "https://w7.pngwing.com/pngs/371/1021/png-transparent-computer-icons-binoculars-binoculars-cdr-text-logo.png",
+            img: "",
+            desc: "Сцена для мероприятий в парке",
+          },
+          {
+            coords: [43.118224, 131.921366],
+            name: "Беседка",
+            iconUrl:
+              "https://static.tildacdn.com/tild6532-3730-4635-b333-646531613638/pavilion.png",
+            img: "",
+            desc: "Беседка рядом с детской площадкой",
+          },
+          {
+            coords: [43.118207, 131.921176],
+            name: "Детская площадка",
+            iconUrl: "https://cdn-icons-png.freepik.com/512/17416/17416575.png",
+            img: "",
+            desc: "Детская площадка для проведения времени всей семьёй",
+          },
+        ];
+
+        // var ChiFan = new ymaps.Placemark(
+        //   [43.117897, 131.921775],
+        //   {
+        //     hintContent: "面条和米饭吃",
+        //     balloonContent: "党为你感到骄傲加上15社会信用",
+        //   },
+        //   // Ну типа текст для метки
+        //   {
+        //     iconImageHref:
+        //       "https://avatars.mds.yandex.net/i?id=221c485a37ed0570142caca58a4463c5d0db369d-5888278-images-thumbs&n=13",
+        //     iconLayout: "default#image",
+        //     iconImageSize: [32, 32],
+        //     iconImageOffset: [-16, -32],
+        //   }
+        // );
+        // // Ну типа вид иконки метки
+
         var myMap = new ymaps.Map(
           "map",
           {
@@ -223,23 +291,6 @@
           myMap.geoObjects.add(polygon);
         });
         // Создание самого полигона
-
-        // var ChiFan = new ymaps.Placemark(
-        //   [43.117897, 131.921775],
-        //   {
-        //     hintContent: "面条和米饭吃",
-        //     balloonContent: "党为你感到骄傲加上15社会信用",
-        //   },
-        //   // Ну типа текст для метки
-        //   {
-        //     iconImageHref:
-        //       "https://avatars.mds.yandex.net/i?id=221c485a37ed0570142caca58a4463c5d0db369d-5888278-images-thumbs&n=13",
-        //     iconLayout: "default#image",
-        //     iconImageSize: [32, 32],
-        //     iconImageOffset: [-16, -32],
-        //   }
-        // );
-        // // Ну типа вид иконки метки
 
         // myMap.geoObjects.add(ChiFan);
         // // Отображение самой метки
@@ -1000,6 +1051,20 @@
             // 43.116639, 131.923351 - новая дорожка
             // 43.116548, 131.923505 - вторая новая дорожка
           ],
+          [
+            [43.116639, 131.923351],
+            [43.116623, 131.923339],
+            [43.116598, 131.923323],
+            [43.116576, 131.923325],
+            [43.116557, 131.923333],
+            [43.116537, 131.923356],
+            [43.116528, 131.923376],
+            [43.116516, 131.923425],
+            [43.116511, 131.923441],
+            [43.116492, 131.923461],
+            [43.116536, 131.923502],
+            [43.116548, 131.923505],
+          ],
         ];
 
         pathCoords.forEach((path) => {
@@ -1013,6 +1078,47 @@
             }
           );
           myMap.geoObjects.add(line);
+        });
+
+        let menuList = document.getElementsByClassName("menuList");
+        let itemList = document.getElementsByClassName("itemList");
+        places.forEach((place) => {
+          const item = document.createElement("div");
+          item.classname = "placeItem";
+          item.innerHTML = `<img class="placeIcon" src="${place.iconUrl}"> ${place.name}`;
+          itemList[0].appendChild(item);
+          var mark = new ymaps.Placemark(
+            place.coords,
+            {
+              hintContent: place.name,
+              balloonContent: place.desc,
+            },
+            {
+              iconImageHref: place.iconUrl,
+              iconLayout: "default#image",
+              iconImageSize: [32, 32],
+              iconImageOffset: [-16, -32],
+            }
+          );
+          myMap.geoObjects.add(mark);
+
+          item.onclick = () => {
+            const iI = document.getElementsByClassName("itemInfo");
+            const iT = document.getElementsByClassName("itemTitle");
+            const iIMG = document.getElementsByClassName("itemImage");
+            const iD = document.getElementsByClassName("infoDesc");
+            const btnU = document.getElementById("btnUndo");
+
+            menuList[0].style.display = "none";
+            iI[0].style.display = "block";
+            iT[0].innerText = place.name;
+            iIMG[0].src = place.img;
+            iD[0].innerText = place.desc;
+            btnU.onclick = () => {
+              menuList[0].style.display = "block";
+              iI[0].style.display = "none";
+            };
+          };
         });
       }
 
@@ -1115,15 +1221,6 @@
           console.log("Светлая тема");
         }
       }
-
-      let menuList = document.getElementsByClassName("menuList");
-      let itemList = document.getElementByClassName("itemList");
-      places.forEach((places) => {
-        const item = document.createElement("div");
-        item.classname = "placeItem";
-        item.innerHTML = `<img class="placeIcon" src="${place.iconUrl}"> ${place.name}`;
-        itemList.appendChild(item);
-      });
     </script>
   </head>
 
@@ -1170,6 +1267,12 @@
       <div class="offcanvas-body small">
         <div class="menuList">
           <div class="itemList"></div>
+        </div>
+        <div class="itemInfo">
+          <h3 class="itemTitle"></h3>
+          <img class="itemImage" />
+          <p class="infoDesc"></p>
+          <p id="btnUndo">↩</p>
         </div>
       </div>
     </div>
