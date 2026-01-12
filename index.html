@@ -85,6 +85,20 @@
                 ],
               }
             );
+
+            data.poligons.forEach((border) => {
+              const polygon = new ymaps.Polygon(
+                [border],
+                {},
+                {
+                  fillColor: "rgba(0, 255, 0, 0.5)",
+                  strokeColor: "rgba(0,175, 0, 1)",
+                  strokeWidth: 2,
+                }
+              );
+              myMap.geoObjects.add(polygon);
+            });
+
             data.paths.forEach((path) => {
               const line = new ymaps.Polyline(
                 path,
@@ -119,19 +133,6 @@
                 }
               );
               myMap.geoObjects.add(mark);
-
-              data.poligons.forEach((border) => {
-                const polygon = new ymaps.Polygon(
-                  [border],
-                  {},
-                  {
-                    fillColor: "rgba(0, 255, 0, 0.5)",
-                    strokeColor: "rgba(0,175, 0, 1)",
-                    strokeWidth: 2,
-                  }
-                );
-                myMap.geoObjects.add(polygon);
-              });
 
               item.onclick = () => {
                 const iI = document.getElementsByClassName("itemInfo");
