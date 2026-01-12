@@ -68,9 +68,23 @@
 
       function init() {
         fetch("data.json")
-          .then((response) => response.json)
+          .then((response) => response.json())
           .then((data) => {
-            console.log(data)
+            console.log(data);
+
+            var myMap = new ymaps.Map(
+              "map",
+              {
+                center: [43.118202, 131.92234],
+                zoom: 15,
+              },
+              {
+                restrictMapArea: [
+                  [43.115, 131.92],
+                  [43.119, 131.926],
+                ],
+              }
+            );
             data.paths.forEach((path) => {
               const line = new ymaps.Polyline(
                 path,
