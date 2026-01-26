@@ -65,8 +65,11 @@ body {
 }
 
 #offcanvasBottom {
-    height: 25vh !important;
+    height: 90vh !important;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     overflow-y: auto;
+    touch-action: none;
+    will-change: transform;
+    transition: transform 0.3s ease;
 }
