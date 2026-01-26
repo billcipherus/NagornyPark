@@ -3,119 +3,119 @@
     {
       "coords": [43.118465, 131.921895],
       "name": "Кафетерий",
-      "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Tea_cup_icon.svg/1200px-Tea_cup_icon.svg.png",
+      "iconUrl": "/icons/coffee1.png",
       "img": "",
       "desc": "Место в центре парка, где можно быстро перекусить с чашкой кофе"
     },
     {
       "coords": [43.118453, 131.922047],
       "name": "Туалет",
-      "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Noun_3121.svg/1200px-Noun_3121.svg.png",
+      "iconUrl": "/icons/toilet.png",
       "img": "",
       "desc": "Туалет"
     },
     {
       "coords": [43.117907, 131.921767],
       "name": "Чи-Фань",
-      "iconUrl": "https://avatars.mds.yandex.net/i?id=221c485a37ed0570142caca58a4463c5d0db369d-5888278-images-thumbs&n=13",
+      "iconUrl": "/icons/chifan.png",
       "img": "",
       "desc": "Китайская еда быстрого приготовления"
     },
     {
       "coords": [43.117879, 131.921837],
       "name": "Pizza Ragazzi",
-      "iconUrl": "https://w7.pngwing.com/pngs/338/926/png-transparent-fast-food-barbecue-hot-dog-lunch-meat-barbecue-barbecue-angle-food.png",
+      "iconUrl": "/icons/pizzaRagazzi.png",
       "img": "",
       "desc": "Итальянская пицца в пяти шагах от парковки"
     },
     {
       "coords": [43.117068, 131.923385],
       "name": "Киоск",
-      "iconUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Tea_cup_icon.svg/1200px-Tea_cup_icon.svg.png",
+      "iconUrl": "/icons/coffee.png",
       "img": "",
       "desc": "Мини-кофейня без помещения"
     },
     {
       "coords": [43.117965, 131.922887],
       "name": "Сцена",
-      "iconUrl": "https://w7.pngwing.com/pngs/371/1021/png-transparent-computer-icons-binoculars-binoculars-cdr-text-logo.png",
+      "iconUrl": "/icons/scene.png",
       "img": "",
       "desc": "Сцена для мероприятий в парке"
     },
     {
       "coords": [43.11821, 131.921226],
       "name": "Детская площадка",
-      "iconUrl": "",
+      "iconUrl": "/icons/playground.png",
       "img": "",
       "desc": "Детская площадка"
     },
     {
       "coords": [43.115674, 131.923127],
       "name": "Нижний вход",
-      "iconUrl": "",
+      "iconUrl": "/icons/entry.png",
       "img": "",
       "desc": "Южный вход в парк с улицы Братская"
     },
     {
       "coords": [43.11565, 131.923023],
       "name": "Нижняя площадь",
-      "iconUrl": "",
+      "iconUrl": "/icons/scene.png",
       "img": "",
       "desc": "Площадь у нижнего входа"
     },
     {
       "coords": [43.115715, 131.922947],
       "name": "Общественное здание Нагорного парка",
-      "iconUrl": "",
+      "iconUrl": "/icons/buildng.png",
       "img": "",
       "desc": "Здание у нижней площади"
     },
     {
       "coords": [43.115872, 131.923122],
       "name": "Дубы Ака и Сайа",
-      "iconUrl": "",
+      "iconUrl": "/icons/tree.png",
       "img": "",
       "desc": "Деревья на южном склоне, где проходят мероприятия"
     },
     {
       "coords": [43.116422, 131.922823],
       "name": "Лесная сцена",
-      "iconUrl": "",
+      "iconUrl": "/icons/scene.png",
       "img": "",
-      "desc": "Закрытая (от неба) площадка на южном склоне для проведения мероприятий"
+      "desc": "Окрытая площадка на южном склоне для проведения мероприятий"
     },
     {
       "coords": [43.116376, 131.923294],
       "name": "Видовая консоль",
-      "iconUrl": "",
+      "iconUrl": "/icons/view.png",
       "img": "",
       "desc": "Видовая, на стадии строительства"
     },
     {
       "coords": [43.116683, 131.923285],
       "name": "Смотровая площадка Нагорного парка",
-      "iconUrl": "",
+      "iconUrl": "/icons/view.png",
       "img": "https://i4.photo.2gis.com/images/geo/0/30258560156437854_23f5.jpg",
       "desc": "С этой площадки открывается панорамный вид на Золотой мост, бухту Золотой Рог и остров Русский, а также на многие другие достопримечательности города. Кроме того, здесь есть множество скамеек и деревянных поверхностей, где можно отдохнуть и насладиться солнцем и морем"
     },
     {
       "coords": [43.117144, 131.924175],
       "name": "Сопка Тюменская",
-      "iconUrl": "",
+      "iconUrl": "/icons/view.png",
       "img": "https://i5.photo.2gis.com/photo-gallery/8212c276-34ab-438b-b6e8-cdd8b51d8792.jpg",
       "desc": "Также известна как гора Бориславского"
     },
     {
       "coords": [43.117254, 131.923707],
       "name": "Грот",
-      "iconUrl": "",
+      "iconUrl": "/icons/cave.png",
       "img": "",
       "desc": ""
     },
     {
       "coords": [43.117479, 131.924006],
       "name": "Долина светлячков",
-      "iconUrl": "",
+      "iconUrl": "/icons/view.png",
       "img": "https://i9.photo.2gis.com/photo-gallery/3383084e-c337-4228-b50a-8d7ee72b19e5.jpg",
       "desc": ""
     }
