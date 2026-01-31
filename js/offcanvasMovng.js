@@ -1,35 +1,43 @@
-document.addEventListener("DOMContentLoader", function () {
-    const offacanvas = document.getElementById("offcanvasBottom")
-    let startY = 0
-        currentY = 0
-        offsetY = 0
-        isDragling = false
-    let lastTranslateY = window.innerHeight * 0.5
-    const handleHeight = 50;
-    const maxTranslateY = window.innerHeight * 0.8
-    const minTranslateY = 0
+document.addEventListener("DOMContentLoaded", function () {
+  const offcanvas = document.getElementById("offcanvasBottom");
+  const bsOffcanvas = new bootstrap.Offcanvas(offcanvas);
+  bsOffcanvas.show();
+  // Две строчки выше чинят проблему отображения offcanvas поверх карты
+  // const bsOffcanvas = new bootstrap.Offcanvas(offcanvas); - создаёт сущность offcanvas из bootstrap, записывают в него наш существующий тег offcanvas
+  // bsOffcanvas.show(); - показывает его на экране
 
-    offcanvas.addEventListener("mousedown", (event) => {
-        startY = event.clientTranslateY - lastTranslateY
-        isDragling = trueoffcanvs.style.transition = none
-    })
+  let startY = 0;
+  let currentY = 0;
+  let offsetY = 0;
+  let isDraging = false;
 
-    document.addEventListener("mousemove", (event) => {
-        if (!isGragging) return
-        currentY = event.clientY
-        offsetY = currentY - startY
-        if (offsetY < minTranslateY) offsetY = minTranslateY
-        if (offsetY > maxTranslateY) offsetY = maxTranslateY
-        offcanvas.style.transform = `translateY(${offsetY}px)`
-    })
+  let lastTranslateY = window.innerHeight * 0.5;
+  const handleHeight = 50;
+  const maxTranslateY = window.innerHeight * 0.8 - handleHeight;
+  const minTranslateY = 0;
 
-    document.mouseup.addEventListener("mouseup", () => {
-        if(!isDragling) return
-        isDragling = false
-        offcanvas.style.transition = "transform 0.3s ease"
-        lastTranslateY = offsetY
-        offacanvas.style.transfrom = `translateY(${lastTranslateY}px)`
-    })
+  offcanvas.addEventListener("mousedown", (event) => {
+    startY = event.clientY - lastTranslateY;
+    isDraging = true;
+    offcanvas.style.transition = "none";
+  });
 
-    offcanvas.style.transform = `translateY(${lastTranslateY}px)`
-})
+  document.addEventListener("mousemove", (event) => {
+    if (!isDraging) return;
+    currentY = event.clientY;
+    offsetY = currentY - startY;
+    if (offsetY < minTranslateY) offsetY = minTranslateY;
+    if (offsetY > maxTranslateY) offsetY = maxTranslateY;
+    offcanvas.style.transform = `translateY(${offsetY}px)`;
+  });
+
+  document.addEventListener("mouseup", () => {
+    if (!isDraging) return;
+    isDraging = false;
+    offcanvas.style.transition = "transform 0.3s ease";
+    lastTranslateY = offsetY;
+    offcanvas.style.transform = `translateY(${lastTranslateY}px)`;
+  });
+
+  offcanvas.style.transform = `translateY(${lastTranslateY}px)`;
+});

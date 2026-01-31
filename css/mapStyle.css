@@ -6,11 +6,13 @@ body,
   margin: 0;
   padding: 0;
 }
+
 body {
   display: flex;
   align-items: stretch;
   flex-direction: column;
 }
+
 #cywbtn {
   --bs-btn-color: #000000;
   --bs-btn-bg: #0d6efd;
@@ -25,6 +27,7 @@ body {
   --bs-btn-disabled-bg: #0851bb;
   --bs-btn-disabled-border-color: #000000;
 }
+
 #themeChanger {
   --bs-btn-color: #000000;
   --bs-btn-bg: #0d6efd;
@@ -39,11 +42,13 @@ body {
   --bs-btn-disabled-bg: #0851bb;
   --bs-btn-disabled-border-color: #000000;
 }
+
 .placeItem {
   display: flex;
   padding: 5px;
   margin: 10px;
 }
+
 .placeIcon {
   width: 20px;
   height: 20px;
@@ -65,11 +70,12 @@ body {
 }
 
 #offcanvasBottom {
-    height: 90vh !important;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    overflow-y: auto;
-    touch-action: none;
-    will-change: transform;
-    transition: transform 0.3s ease;
+  height: 90vh !important;
+  max-height: 90vh !important;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow-y: auto;
+  touch-action: none;
+  will-change: transform;
+  transition: transform 0.3s ease;
 }
