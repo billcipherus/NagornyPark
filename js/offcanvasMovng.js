@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.addEventListener("touchmove", (event) => {
-    if (!isDraging) return;
+     if (!isDraging) return;
     currentY = event.clientY;
     offsetY = currentY - startY;
     if (offsetY < minTranslateY) offsetY = minTranslateY;
