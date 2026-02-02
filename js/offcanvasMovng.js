@@ -39,5 +39,28 @@ document.addEventListener("DOMContentLoaded", function () {
     offcanvas.style.transform = `translateY(${lastTranslateY}px)`;
   });
 
+  offcanvas.addEventListener("touchstart", (event) => {
+    startY = event.clientY - lastTranslateY;
+    isDraging = true;
+    offcanvas.style.transition = "none";
+  });
+
+  document.addEventListener("touchmove", (event) => {
+    if (!isDraging) return;
+    currentY = event.clientY;
+    offsetY = currentY - startY;
+    if (offsetY < minTranslateY) offsetY = minTranslateY;
+    if (offsetY > maxTranslateY) offsetY = maxTranslateY;
+    offcanvas.style.transform = `translateY(${offsetY}px)`;
+  });
+
+  document.addEventListener("touchend", () => {
+    if (!isDraging) return;
+    isDraging = false;
+    offcanvas.style.transition = "transform 0.3s ease";
+    lastTranslateY = offsetY;
+    offcanvas.style.transform = `translateY(${lastTranslateY}px)`;
+  });
+
   offcanvas.style.transform = `translateY(${lastTranslateY}px)`;
 });
