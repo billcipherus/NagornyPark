@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let lastTranslateY = window.innerHeight * 0.5;
   const handleHeight = 50;
-  const maxTranslateY = window.innerHeight * 0.8 - handleHeight;
+  const maxTranslateY = window.innerHeight * 0.9 - handleHeight;
   const minTranslateY = 0;
 
   offcanvas.addEventListener("mousedown", (event) => {
@@ -40,14 +40,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   offcanvas.addEventListener("touchstart", (event) => {
-    startY = event.clientY - lastTranslateY;
+    startY = event.touches[0].clientY - lastTranslateY;
     isDraging = true;
     offcanvas.style.transition = "none";
   });
 
   document.addEventListener("touchmove", (event) => {
      if (!isDraging) return;
-    currentY = event.clientY;
+    currentY = event.touches[0].clientY;
     offsetY = currentY - startY;
     if (offsetY < minTranslateY) offsetY = minTranslateY;
     if (offsetY > maxTranslateY) offsetY = maxTranslateY;
