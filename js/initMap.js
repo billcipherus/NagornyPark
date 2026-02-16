@@ -28,7 +28,7 @@ ymaps.ready(async () => {
         [border],
         {},
         {
-          fillColor: "rgba(133, 217, 121, 0.5)",
+          fillColor: "rgba(133, 217, 121, 1)",
           strokeColor: "rgba(167, 227, 159, 1)",
           strokeWidth: 2,
         },
@@ -82,6 +82,15 @@ ymaps.ready(async () => {
       item.classname = "placeItem";
       item.innerHTML = `<img class="placeIcon" src="${place.iconUrl}"> ${place.name}`;
       itemList[0].appendChild(item);
+
+      let iconSize = [32, 32];
+      let iconOffset = [-16, -32];
+
+      if (place.name === "Чи-Фань" || place.name === "Pizza Ragazzi") {
+        iconSize = [16, 16];
+        iconOffset = [-8, -16];
+      }
+
       var mark = new ymaps.Placemark(
         place.coords,
         {
@@ -91,8 +100,8 @@ ymaps.ready(async () => {
         {
           iconImageHref: place.iconUrl,
           iconLayout: "default#image",
-          iconImageSize: [32, 32],
-          iconImageOffset: [-16, -32],
+          iconImageSize: iconSize,
+          iconImageOffset: iconOffset,
         },
       );
       myMap.geoObjects.add(mark);
