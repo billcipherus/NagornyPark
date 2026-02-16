@@ -5,9 +5,8 @@ async function loadJson() {
 }
 
 ymaps.ready(async () => {
-  
-  const data = await loadJson()
-  ymaps.ready(init)
+  const data = await loadJson();
+  ymaps.ready(init);
 
   function init() {
     var myMap = new ymaps.Map(
@@ -29,12 +28,25 @@ ymaps.ready(async () => {
         [border],
         {},
         {
-          fillColor: "rgba(0, 255, 0, 0.5)",
-          strokeColor: "rgba(0,175, 0, 1)",
+          fillColor: "rgba(133, 217, 121, 0.5)",
+          strokeColor: "rgba(167, 227, 159, 1)",
           strokeWidth: 2,
         },
       );
       myMap.geoObjects.add(polygon);
+    });
+
+    data.lake.forEach((border) => {
+      const lake = new ymaps.Polygon(
+        [border],
+        {},
+        {
+          fillColor: "rgba(164, 232, 237, 1)",
+          strokeColor: "rgba(0, 171, 194, 1)",
+          strokeWidth: 2,
+        },
+      );
+      myMap.geoObjects.add(lake);
     });
 
     data.paths.forEach((path) => {
@@ -42,12 +54,25 @@ ymaps.ready(async () => {
         path,
         {},
         {
-          strokeColor: "rgba(0, 0, 0, 1)",
+          strokeColor: "rgb(130, 130, 130)",
           strokeWidth: 3,
           strokeOppacity: 1,
         },
       );
       myMap.geoObjects.add(line);
+    });
+
+    data.buildings.forEach((border) => {
+      const building = new ymaps.Polygon(
+        [border],
+        {},
+        {
+          fillColor: "rgb(112, 112, 112)",
+          strokeColor: "rgb(71, 71, 71)",
+          strokeWidth: 2,
+        },
+      );
+      myMap.geoObjects.add(building);
     });
 
     let menuList = document.getElementsByClassName("menuList");
