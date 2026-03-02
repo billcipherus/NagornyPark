@@ -46,12 +46,15 @@ body {
 .placeItem {
   display: flex;
   padding: 5px;
-  margin: 10px;
+  margin: 5px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .placeIcon {
-  width: 20px;
-  height: 20px;
+  padding: 3px;
+  width: 30px;
+  height: 30px;
 }
 
 .itemInfo {
@@ -78,4 +81,13 @@ body {
   touch-action: none;
   will-change: transform;
   transition: transform 0.3s ease;
+}
+
+.offcanvas-title {
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.containerTitle {
+  display: flex;
 }

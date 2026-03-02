@@ -79,7 +79,7 @@ ymaps.ready(async () => {
     let itemList = document.getElementsByClassName("itemList");
     data.places.forEach((place) => {
       const item = document.createElement("div");
-      item.classname = "placeItem";
+      item.className = "placeItem";
       item.innerHTML = `<img class="placeIcon" src="${place.iconUrl}"> ${place.name}`;
       itemList[0].appendChild(item);
 
