@@ -45,6 +45,7 @@ body {
 
 .placeItem {
   display: flex;
+  gap: 5px;
   padding: 5px;
   margin: 5px;
   font-size: 20px;
@@ -59,17 +60,6 @@ body {
 
 .itemInfo {
   display: none;
-}
-
-#offcanvasHandle {
-  width: 50px;
-  height: 10px;
-  border-radius: 35px;
-  background-color: #666666;
-  position: absolute;
-  top: 10px;
-  left: 47.5%;
-  cursor: grab;
 }
 
 #offcanvasBottom {
@@ -88,6 +78,37 @@ body {
   font-size: 30px;
 }
 
-.containerTitle {
+.offcanvas-header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+#themeChangeBtn {
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  padding-right: 15px;
+  z-index: 10;
+}
+
+#offcanvasHandle {
+  width: 50px;
+  height: 10px;
+  border-radius: 35px;
+  background-color: #666666;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: grab;
+  z-index: 5;
+}
+
+.changeIconColor {
+  filter: invert(100%);
 }

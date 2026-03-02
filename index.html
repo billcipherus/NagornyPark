@@ -14,14 +14,6 @@
   </head>
 
   <body>
-    <button
-      class="btn btn-primary m-2"
-      type="button"
-      id="themeChanger"
-      onclick="changeTheme()"
-    >
-      Смена темы
-    </button>
 
     <div
       class="offcanvas offcanvas-bottom"
@@ -34,18 +26,13 @@
     >
       <div class="offcanvas-header">
         <div id="offcanvasHandle"></div>
-        <div class="containerTitle">
-          <h5 class="offcanvas-title" id="offcanvasBottomLabel">
+        <h5 class="offcanvas-title" id="offcanvasBottomLabel">
           Точки на карте:
-          </h5>
-        </div>
-        
+        </h5>
         <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
+          id="themeChangeBtn"
+          onclick="changeTheme()"
+        >☀</button>
       </div>
       <div class="offcanvas-body small">
         <div class="menuList">
