@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let lastTranslateY = window.innerHeight * 0.5;
   const handleHeight = 50;
-  const maxTranslateY = window.innerHeight * 0.8 - handleHeight;
+  const maxTranslateY = window.innerHeight * 0.9 - handleHeight;
   const minTranslateY = 0;
 
   offcanvas.addEventListener("mousedown", (event) => {
